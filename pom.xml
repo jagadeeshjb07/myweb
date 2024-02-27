@@ -4,7 +4,7 @@
 	<groupId>in.javahome</groupId>
 	<artifactId>myweb</artifactId>
 	<packaging>war</packaging>
-	<version>4.13.1</version>
+	<version>3.3.2</version>
 	<name>Java Home myweb</name>
 	<url>http://maven.apache.org</url>
 	
@@ -23,7 +23,7 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.13.1</version>
+			<version>3.3.2</version>
 			<scope>test</scope>
 		</dependency>
 
@@ -45,7 +45,7 @@
 	    <pluginRepository>    
 		<id>maven1</id>
 		<name>Maven.org</name>
-		<url>http://repo1.maven.org/maven2</url>
+		<url>http://repo1.maven.org/maven3</url>
 	    </pluginRepository>
 	</pluginRepositories>
 
