@@ -2,7 +2,7 @@ pipeline{
     agent any
     
     environment{
-        PATH = "/usr/share:$PATH"
+        PATH = "/usr/bin:$PATH"
     }
     stages{
         stage("Git Checkout"){
@@ -20,11 +20,11 @@ pipeline{
             steps{
                 sshagent(['jenkins']) {
                 sh """
-                    scp -o StrictHostKeyChecking=no target/myweb.war  ec2-user@172.31.37.64:/home/ec2-user/apache-tomcat-9.0.85/webapps/
+                    scp -o StrictHostKeyChecking=no target/myweb.war  ec2-user@172.31.37.64:/root/apache-tomcat-9.0.85/webapps/
                     
-                    ssh ec2-user@172.31.37.64 /home/ec2-user/apache-tomcat-9.0.85/bin/shutdown.sh
+                    ssh ec2-user@172.31.37.64 /root/apache-tomcat-9.0.85/bin/shutdown.sh
                     
-                    ssh ec2-user@172.31.37.64 /home/ec2-user/apache-tomcat-9.0.85/bin/startup.sh
+                    ssh ec2-user@172.31.37.64 /root/apache-tomcat-9.0.85/bin/startup.sh
                 
                 """
             }
